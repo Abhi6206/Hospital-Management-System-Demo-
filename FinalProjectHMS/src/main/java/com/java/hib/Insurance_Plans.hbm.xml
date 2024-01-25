@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated Jan 11, 2024, 4:58:54 PM by Hibernate Tools 3.6.2.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.java.hib.Insurance_Plans"
+    table="INSURANCE_PLANS"
+>
+
+	<id 
+        name="plan_Id"
+        type="int"
+    >
+    
+<column name="PLAN_ID" />
+	    <generator class="assigned" />
+    </id>
+
+
+
+
+    <property
+        name="insurance_Id"
+	    type="java.lang.String"
+    >
+<column name="INSURANCE_ID" />
+  </property>
+
+    <property
+        name="premium_Amount"
+	    type="double"
+    >
+<column name="PREMIUM_AMOUNT" />
+  </property>
+
+    <property
+        name="coverage_Amount"
+	    type="double"
+    >
+<column name="COVERAGE_AMOUNT" />
+  </property>
+
+    <property
+        name="cover_Disease"
+	    type="java.lang.String"
+    >
+<column name="COVER_DISEASE" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>

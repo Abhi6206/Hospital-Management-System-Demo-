@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd" 
+              version="2.0" metadata-complete="false">
+    <!-- This file must be present with our jar, even if it is empty.  Otherwise, our Java annotations won't get scanned! -->
+<managed-bean>
+	<managed-bean-name>hibImpl</managed-bean-name>
+   <managed-bean-class>com.java.hib.InsuranceImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>insurance</managed-bean-name>
+   <managed-bean-class>com.java.hib.insurance_Claim</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+<managed-bean-name>paginationDao</managed-bean-name>
+<managed-bean-class>com.java.hib.JsfPaginationBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+<managed-bean-name>patient</managed-bean-name>
+<managed-bean-class>com.java.hib.Patient_enrollment</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+<managed-bean-name>provider</managed-bean-name>
+<managed-bean-class>com.java.hib.Provider_Details</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+<managed-bean-name>insController</managed-bean-name>
+<managed-bean-class>com.java.hib.InsuranceController</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+		<managed-bean-name>hmsImpl</managed-bean-name>
+		<managed-bean-class>com.java.hib.HmsDAOImpl</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>controller</managed-bean-name>
+		<managed-bean-class>com.java.hib.HmsController</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>insDetails</property-name>
+			<property-class>com.java.hib.Insurance_Details</property-class>
+			<value>#{insDetails}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>insClaim</property-name>
+			<property-class>com.java.hib.insurance_Claim</property-class>
+			<value>#{insClaim}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dao</property-name>
+			<property-class>com.java.hib.HmsDAOImpl</property-class>
+			<value>#{dao}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>patient</property-name>
+			<property-class>com.java.hib.Patient_enrollment</property-class>
+			<value>#{patient}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>provider</property-name>
+			<property-class>com.java.hib.Provider_Details</property-class>
+			<value>#{provider}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>insPlan</property-name>
+			<property-class>com.java.hib.Insurance_Plans</property-class>
+			<value>#{insPlan}</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>admin</managed-bean-name>
+		<managed-bean-class>com.java.hib.AdminLogin
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>adminDao</managed-bean-name>
+		<managed-bean-class>com.java.hib.AdminLoginImpl</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>adminController</managed-bean-name>
+		<managed-bean-class>com.java.hib.AdminController</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+
+		<managed-property>
+			<property-name>admin</property-name>
+			<property-class>com.java.hib.AdminLogin</property-class>
+			<value>#{admin}</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>adminDao</property-name>
+			<property-class>com.java.hib.AdminLoginImpl</property-class>
+			<value>#{adminDao}</value>
+		</managed-property>
+	</managed-bean>
+
+</faces-config>

@@ -1,0 +1,72 @@
+h1 {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 20px; /* Adjust the margin-top value for spacing */
+}
+
+/* Style for output labels */
+.OPL {
+	display: block;
+	margin-bottom: 5px; /* Adjust the margin-bottom value for spacing */
+}
+
+/* Style for input text */
+.noBorders {
+	margin-bottom: 10px; /* Adjust the margin-bottom value for spacing */
+}
+
+/* Style for form container */
+#form {
+	max-width: 600px; /* Adjust the max-width of the form container */
+	margin: 0 auto; /* Center the form container horizontally */
+}
+
+/* Style for panel grid */
+#panel {
+	width: 100%; /* Make the panel grid full width */
+}
+body{
+	font-family: 'Arial', sans-serif;
+    background-image: url('Medicine.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.errorMsg {
+    color: #ff0000;
+}
+#container {
+	width: 35%;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-left: 420px;
+}
+/* Style for buttons container */
+
+.buttonStyle,
+.rejectButton {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+ 
+.buttonStyle:hover,
+.rejectButton:hover {
+    background-color: #45a049;
+}
+ 
+.rejectButton {
+    background-color: #d9534f;
+}
+ 
+.rejectButton:hover {
+    background-color: #c9302c;
+}
+
+/* Style for the table */

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jan 11, 2024, 10:37:15 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.hib.Claim_History" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CLAIM_HISTORY">
+        <id name="uhId" type="java.lang.String">
+            <column name="UHID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="claimHistoryId" optimistic-lock="true" type="int" unique="false">
+            <column name="CLAIMHISTORYID"/>
+        </property>
+        <property generated="never" lazy="false" name="claim_Id" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="CLAIM_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="providerId" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PROVIDERID"/>
+        </property>
+        <property generated="never" lazy="false" name="subscription_Id" optimistic-lock="true" type="int" unique="false">
+            <column name="SUBSCRIPTION_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="prescription_Id" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PRESCRIPTION_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="visit_Id" optimistic-lock="true" type="int" unique="false">
+            <column name="VISIT_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="ClaimAppliedOn" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="CLAIMAPPLIEDON"/>
+        </property>
+        <property generated="never" lazy="false" name="fromDate" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="FROMDATE"/>
+        </property>
+        <property generated="never" lazy="false" name="toDate" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="TODATE"/>
+        </property>
+        <property generated="never" lazy="false" name="reimbursementAmount" optimistic-lock="true" type="double" unique="false">
+            <column name="REIMBURSEMENTAMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="patientResponsibility" optimistic-lock="true" type="double" unique="false">
+            <column name="PATIENTRESPONSIBILITY"/>
+        </property>
+        <property generated="never" lazy="false" name="status" optimistic-lock="true" unique="false">
+            <column name="STATUS"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.hib.Status</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property generated="never" lazy="false" name="comments" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="COMMENTS"/>
+        </property>
+    </class>
+</hibernate-mapping>

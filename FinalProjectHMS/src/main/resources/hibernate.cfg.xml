@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">Abhi0809</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/finalproject</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping resource="com/java/hib/insurance_Claim.hbm.xml"/>
+        <mapping resource="com/java/hib/Patient_enrollment.hbm.xml"/>
+        <mapping resource="com/java/hib/Provider_Details.hbm.xml"/>
+        <mapping resource="com/java/hib/Claim_History.hbm.xml"/>
+          <mapping resource="com/java/hib/Insurance_Details.hbm.xml"/>
+            <mapping resource="com/java/hib/Insurance_Plans.hbm.xml"/>
+             <mapping resource="com/java/hib/Subscriptions.hbm.xml"/>
+             <mapping resource="com/java/hib/AdminLogin.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
